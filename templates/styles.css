@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif; /* 設置字體 */
+    text-align: center; /* 居中對齊 */
+    margin: 20px; /* 添加一些頁面邊距 */
+}
+h1 {
+    color: #333; /* 標題顏色 */
+}
+#weight_display, #price_display {
+    font-size: 20px; /* 文本大小 */
+    margin-bottom: 10px; /* 添加一些底部間距 */
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
+.button:hover {
+    background-color: #45a049;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* 滑鼠懸停時陰影加深 */
+}
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+#manual_input_form {
+    margin: 20px 0;
+}
+#history_display {
+    margin-top: 20px;
+    text-align: left;
+}
+select {
+    margin-bottom: 20px;
+}
