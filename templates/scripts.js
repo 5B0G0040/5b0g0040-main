@@ -7,6 +7,9 @@ let currencyRates = {
 let currentCurrency = 'TWD';
 
 $(document).ready(function() {
+    // 清除本地存儲的歷史紀錄
+    localStorage.removeItem('history');
+
     loadHistory();
     setInterval(function() {
         $.getJSON('/weight', function(data) {
@@ -35,7 +38,7 @@ function loadHistory() {
         history = JSON.parse(storedHistory);
         displayHistory();
     }
-}    
+}
 
 function displayHistory() {
     let historyDisplay = $('#history_display');
@@ -80,7 +83,7 @@ function updatePrice(weight) {
         let convertedPrice = (price * currencyRates[currentCurrency]).toFixed(2);
         if (weight === 0) {
             displayWeight = '0 公斤';
-        } else if (weight < 1) {S
+        } else if (weight < 1) {
             displayWeight = (weight * 1000).toFixed(1) + ' 公克';
         } else {
             displayWeight = weight + ' 公斤';
